@@ -32,6 +32,11 @@
             <artifactId>mrpc-serialize-kryo</artifactId>
         </dependency>
 
+        <!-- zookeeper [非必须] -->
+        <dependency>
+            <groupId>com.kongzhong.mrpc</groupId>
+            <artifactId>mrpc-registry-zk</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

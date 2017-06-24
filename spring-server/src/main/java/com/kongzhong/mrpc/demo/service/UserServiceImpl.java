@@ -12,6 +12,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * 普通方式实现
+ *
  * @author biezhi
  *         2017/4/19
  */

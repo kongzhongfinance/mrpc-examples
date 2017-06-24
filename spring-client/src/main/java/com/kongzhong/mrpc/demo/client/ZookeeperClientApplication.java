@@ -2,6 +2,7 @@ package com.kongzhong.mrpc.demo.client;
 
 import com.kongzhong.mrpc.client.RpcSpringClient;
 import com.kongzhong.mrpc.demo.service.UserService;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.concurrent.TimeUnit;
 
@@ -11,15 +12,14 @@ import java.util.concurrent.TimeUnit;
  * @author biezhi
  *         25/06/2017
  */
-public class HelloWorldClientApplication {
+public class ZookeeperClientApplication {
 
     public static void main(String[] args) throws InterruptedException {
 
-        RpcSpringClient rpcClient = new RpcSpringClient();
-        // 设置连接服务端
-        rpcClient.setDirectAddress("127.0.0.1:5066");
+        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("mrpc-client-zookeeper.xml");
+        RpcSpringClient client = ctx.getBean(RpcSpringClient.class);
 
-        UserService userService = rpcClient.getProxyReferer(UserService.class);
+        UserService userService = client.getProxyReferer(UserService.class);
 
         for (int i = 1; i <= 3; i++) {
             String result = userService.hello("mrpc" + i);
@@ -27,7 +27,8 @@ public class HelloWorldClientApplication {
             TimeUnit.SECONDS.sleep(2);
         }
 
-        rpcClient.shutdown();
+        client.shutdown();
+
     }
 
 }

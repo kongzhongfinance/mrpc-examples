@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * 性能测试服务
+ *
  * Created by biezhi on 2017/1/10.
  */
 public interface BenchmarkService {
