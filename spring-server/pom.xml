@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>mrpc-examples</artifactId>
+        <groupId>com.kongzhong.mrpc</groupId>
+        <version>1.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>spring-server</artifactId>
+
+    <dependencies>
+
+        <!-- 公共API定义 -->
+        <dependency>
+            <groupId>com.kongzhong.mrpc</groupId>
+            <artifactId>demo-api</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <!-- RPC核心 -->
+        <dependency>
+            <groupId>com.kongzhong.mrpc</groupId>
+            <artifactId>mrpc-core</artifactId>
+        </dependency>
+
+        <!-- kyro序列化 -->
+        <dependency>
+            <groupId>com.kongzhong.mrpc</groupId>
+            <artifactId>mrpc-serialize-kryo</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>
