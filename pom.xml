@@ -15,6 +15,7 @@
         <module>spring-server</module>
         <module>spring-boot-client</module>
         <module>spring-boot-server</module>
+        <module>spring-boot-server-and-client</module>
     </modules>
 
     <properties>
